@@ -1,108 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FrameFind helps you discover visual inspiration for any idea, place, or subject.">
-    <title>FrameFind — Find Your Perspective</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelVerse | Image Search</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="site-header" id="site-header">
-        <a href="#" class="brand" aria-label="FrameFind home">
-            <span class="brand-icon" aria-hidden="true">F.</span>
-            <span>framefind<span class="brand-period">.</span></span>
-        </a>
+  <header>
+    <h1>PixelVerse</h1>
+    <p>Discover your world, one image at a time.</p>
+  </header>
 
-        <span class="header-note">YOUR NEXT IDEA STARTS HERE</span>
-    </header>
+  <main>
+    <form id="search-form">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for cats, ocean, new york..."
+        aria-label="Search images"
+      >
+      <button id="search-button" type="submit">Search</button>
+    </form>
 
-    <main>
-        <section class="hero" aria-labelledby="hero-title">
-            <p class="eyebrow">
-                <span class="eyebrow-line"></span>
-                A VISUAL DISCOVERY TOOL
-            </p>
-
-            <h1 id="hero-title">
-                See the world<br>
-                <span class="accent-text">differently.</span>
-            </h1>
-
-            <p class="hero-description">
-                From faraway places to tiny details, find images that
-                spark your curiosity and bring your ideas to life.
-            </p>
-
-            <div id="search-form" class="search-form" role="search" aria-label="Image search">
-                <label for="search-input" class="sr-only">
-                    What would you like to discover?
-                </label>
-
-                <span class="search-icon" aria-hidden="true">⌕</span>
-
-                <input
-                    type="search"
-                    id="search-input"
-                    name="query"
-                    placeholder="Try 'Japanese gardens'..."
-                    autocomplete="off"
-                >
-
-                <button type="button" id="search-button">
-                    Search <span aria-hidden="true">↗</span>
-                </button>
-            </div>
-
-            <div class="quick-picks">
-                <span class="quick-picks-label">GET INSPIRED</span>
-                <button type="button" class="chip">Nature <span>↗</span></button>
-                <button type="button" class="chip">Architecture <span>↗</span></button>
-                <button type="button" class="chip">Street life <span>↗</span></button>
-                <button type="button" class="chip">Abstract <span>↗</span></button>
-            </div>
-
-            <div class="search-tools">
-                <button type="button" id="clear-button" class="clear-button">
-                    <span aria-hidden="true">↺</span> Clear search
-                </button>
-                <span class="tools-divider" aria-hidden="true"></span>
-                <p class="results-count" id="results-count">Your visual canvas awaits</p>
-            </div>
-        </section>
-
-        <section class="results-section" aria-label="Image search results">
-            <div class="results-heading">
-                <div>
-                    <p class="section-kicker">THE COLLECTION</p>
-                    <h2>Explore the unseen<span class="accent-text">.</span></h2>
-                </div>
-                <span class="collection-number">01 / DISCOVER</span>
-            </div>
-
-            <div id="results" class="results-grid" aria-live="polite" aria-label="Image results">
-            </div>
-
-            <div id="empty-state" class="empty-state">
-                <div class="empty-art" aria-hidden="true">
-                    <span class="art-sun"></span>
-                    <span class="art-hill art-hill-back"></span>
-                    <span class="art-hill art-hill-front"></span>
-                    <span class="art-star">✳</span>
-                </div>
-                <h3>Your next discovery is one search away.</h3>
-                <p>Enter a topic above or choose an inspiration chip to get started.</p>
-                <span class="empty-state-caption">GOOD THINGS BEGIN WITH CURIOSITY</span>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <a href="#" class="footer-brand">framefind<span class="brand-period">.</span></a>
-        <p>Made for the endlessly curious.</p>
-        <span class="footer-mark">F / 2026</span>
-    </footer>
-
-    <script src="script.js"></script>
+    <p id="results-count"></p>
+    <div id="results"></div>
+  </main>
 </body>
 </html>
